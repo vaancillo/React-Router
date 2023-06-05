@@ -12,7 +12,7 @@
 
 - [x] Crear componente Router para hacerlo más declarativo
 
-- [] Soportar ruta por defecto (404)
+- [x] Soportar ruta por defecto (404)
 
 - [] Soportar rutas con parámetros
 

@@ -12,4 +12,5 @@ export default function Page404 () {
         <Link to='/'>Volver a la home</Link>
         </>
     )
+
 }
