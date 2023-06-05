@@ -6,7 +6,7 @@
 
 - [x] Crea una forma de hacer SPAs (Single Page Applications)
 
-- [+] Poder navegar entre páginas con el botón de atrás
+- [x] Poder navegar entre páginas con el botón de atrás
 
 - [x] Crear componente Link para hacerlo declarativo
 
