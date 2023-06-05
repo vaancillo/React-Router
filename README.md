@@ -10,7 +10,7 @@
 
 - [x] Crear componente Link para hacerlo declarativo
 
-- [] Crear componente Router para hacerlo más declarativo
+- [x] Crear componente Router para hacerlo más declarativo
 
 - [] Soportar ruta por defecto (404)
 

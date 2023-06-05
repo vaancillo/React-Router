@@ -7,6 +7,7 @@ export function navigate (href) {
     window.dispatchEvent(navigationEvent)
   }
 
+// eslint-disable-next-line react/prop-types
 export function Link ({ target, to, ...props }) {
     const handleCLlick = (event) => {
 
