@@ -14,7 +14,7 @@
 
 - [x] Soportar ruta por defecto (404)
 
-- [] Soportar rutas con parámetros
+- [x] Soportar rutas con parámetros
 
 - [] Componente para hacerlo declarativo
 

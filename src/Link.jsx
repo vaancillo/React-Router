@@ -1,5 +1,6 @@
 import { BUTTONS, EVENTS } from "./const"
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function navigate (href) {
     window.history.pushState({}, '', href)
     // crear evento personalizado
@@ -11,7 +12,7 @@ export function navigate (href) {
 export function Link ({ target, to, ...props }) {
     const handleCLlick = (event) => {
 
-      const isMainEvent = event.button === BUTTONS.primaryS// primary click
+      const isMainEvent = event.button === BUTTONS.primary // primary click
       const isModifiedEvent = event.metaKwy || event.altKey || event.ctrlKey || event.shiftKey
 
       const isManageeableEvent = target === undefined || target === '_self'
@@ -19,7 +20,7 @@ export function Link ({ target, to, ...props }) {
       if (isMainEvent && isManageeableEvent && !isModifiedEvent) {
         event.preventDefault()
         navigate(to) // navegacion SPA 
-      }
+      } 
 
     }
 
