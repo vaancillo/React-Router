@@ -38,6 +38,7 @@ export function Router ({ routes = [], defaultComponent: DefaultComponent = () =
       // por ejemplo, si la ruta es /search/query:
       // matched.params.query === 'javascript
       routeParams = matched.params 
+      return true
 
     })?.Component
   
