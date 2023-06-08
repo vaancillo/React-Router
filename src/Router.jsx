@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react'
+/* eslint-disable react/prop-types */
+import { useState, useEffect, Children } from 'react'
 import { EVENTS } from './const'
 import { match } from 'path-to-regexp'
 
-// eslint-disable-next-line react/prop-types
-export function Router ({ routes = [], defaultComponent: DefaultComponent = () => <h1>404</h1>}) {
+export function Router ({ children, routes = [], defaultComponent: DefaultComponent = () => <h1>404</h1>}) {
     const [currentPath, setCurrentPath] = useState(window.location.pathname)
   
     useEffect(() => {
@@ -23,7 +23,21 @@ export function Router ({ routes = [], defaultComponent: DefaultComponent = () =
   
     let routeParams = {}
 
-    const Page = routes.find(({ path }) => {
+    // añadir las Routes que vienen del children <Route /> component
+    const routesFromChildren =  Children.map(children, ({ props, type  }) => {
+      const { name } = type
+      const isRoute = name === 'Route'
+
+      return isRoute ? props : null
+      // esto es lo mismo 
+      // if (!isRoute) return null
+
+      // return props 
+    })
+
+    const routesToUse = routes.concat(routesFromChildren)
+
+    const Page = routesToUse.find(({ path }) => {
       if (path === currentPath) return  true
       
       // hemos usado path-tp-regexp

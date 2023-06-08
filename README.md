@@ -16,11 +16,11 @@
 
 - [x] Soportar rutas con parámetros
 
-- [] Componente para hacerlo declarativo
+- [x] Componente <Route /> para hacerlo declarativo
 
-- [] Lazy Loading de las rutas
+- [x] Lazy Loading de las rutas
 
-- [] Hacer un i18n con las rutas
+- [x] Hacer un i18n con las rutas
 
 - [] Testing
 
